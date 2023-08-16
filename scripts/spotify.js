@@ -1,5 +1,11 @@
 // Description: Spotify API wrapper
 window.spotify = {
+    logout: function () {
+        if (localStorage.getItem('access_token')) {
+            localStorage.removeItem('access_token');
+            window.location.reload()
+        }
+    },
     login: function () {
         if(localStorage.getItem('access_token')) return;
         const client_id = "8df376a63fff4f42877c404842e093dd"
@@ -13,7 +19,7 @@ window.spotify = {
                     window.location = 'https://accounts.spotify.com/authorize?' + new URLSearchParams({
                         response_type: 'code',
                         client_id: client_id,
-                        scope: 'user-read-private user-read-email user-modify-playback-state user-read-playback-state',
+                        scope: 'user-modify-playback-state',
                         redirect_uri: window.location.href.split('?')[0],
                         state: generateRandomString(16),
                         code_challenge_method: 'S256',
@@ -53,7 +59,11 @@ window.spotify = {
                 "Content-Type": "application/json",
                 'Authorization': 'Bearer ' + localStorage.getItem("access_token")
             },
-        }).then(console.log)
+        }).then(function (rsp) {
+            if (rsp.status === 401) {
+                window.spotify.logout()
+            }
+        })
     },
     pause: function () {
         fetch("https://api.spotify.com/v1/me/player/pause", {
@@ -61,7 +71,11 @@ window.spotify = {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem("access_token")
             }
-        }).then(console.log)
+        }).then(function (rsp) {
+            if (rsp.status === 401) {
+                window.spotify.logout()
+            }
+        })
     },
     setVolume: function (volume) {
         fetch("https://api.spotify.com/v1/me/player/volume?volume_percent=" + volume, {
@@ -69,7 +83,11 @@ window.spotify = {
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem("access_token")
             }
-        }).then(console.log)
+        }).then(function (rsp) {
+            if (rsp.status === 401) {
+                window.spotify.logout()
+            }
+        })
     }
 }
 
