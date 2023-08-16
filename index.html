@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Fri Rolls Musikspelare</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+<h1>Fri Rolls musiklista!</h1>
+<h2>Känslor</h2>
+<div id="playlist" style="display: flex">
+    <div class="button" id="togglePlay"><img src="pause.svg"/>&emsp;Pause!</div>
+</div>
+<input id="slider" type="range" min="1" max="100" value="50">
+</body>
+<script>
+    window.songs = [
+        {
+            feeling: "happy",
+            offset_ms: 21_500,
+            uri: "spotify:track:3oTYv0yShT4sjuPncoUXfK"
+        },
+        {
+            feeling: "sad",
+            offset_ms: 0,
+            uri: "spotify:track:0fjQ4u99SVRZFUILPs8yM1"
+        },
+        {
+            feeling: "melankolisk slutscen",
+            offset_ms: 0,
+            uri: "spotify:track:0fjQ4u99SVRZFUILPs8yM1"
+        }
+    ]
+</script>
+<script>
+    const stringToColour = function (str) {
+        let hash = 0;
+        str.split('').forEach(char => {
+            hash = char.charCodeAt(0) + ((hash << 5) - hash)
+        })
+        let colour = '#'
+        for (let i = 0; i < 2; i++) {
+            const value = (hash >> (i * 8)) & 0xff
+            colour += "0" + value.toString(16).padStart(1, '0')
+        }
+        return colour + "ff"
+    }
+    // Get your token here: https://developer.spotify.com/documentation/web-playback-sdk/tutorials/getting-started
+    const token = 'BQDMjo5xpNaR7mVKXU-WezsiEZekIdjzltYKzdw-wdjDm0dWKoJhDYfpBGl5ffi2VRWvINzh6L3ZdYUTQzXo02KLKYXu8AoOOTXEpAtAETQTXmsXVBj80FUcvdOphLKge_LR2XLS8XVzVtTg8f-IYuhP0BGtxD_Yt_4WbZn6jh0WIjs-Ev_UBrq-FBsyUEK3j0Ub';
+    for (const song of window.songs) {
+        document.getElementById("playlist").innerHTML +=
+            "<div style='background-color: " + stringToColour(song.feeling) + "' class='button' id='" + song.feeling + "'> <img src='/play.svg'>&emsp;" + song.feeling + "</div>";
+    }
+    let slider = document.getElementById("slider");
+    fetch("https://api.spotify.com/v1/me/player/volume?volume_percent=" + slider.value, {
+        method: "PUT",
+        headers: {
+            'Authorization': 'Bearer ' + token
+        }
+    }).then(function (response) {
+        console.log(response);
+    })
+    slider.oninput = function () {
+        fetch("https://api.spotify.com/v1/me/player/volume?volume_percent=" + slider.value, {
+            method: "PUT",
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        }).then(function (response) {
+            console.log(response);
+        })
+    }
+    for (const song of window.songs) {
+        document.getElementById(song.feeling).onclick = function () {
+            console.log("Play " + song.feeling + "!");
+            fetch("https://api.spotify.com/v1/me/player/play", {
+                method: "PUT",
+                body: JSON.stringify({
+                    uris: [song.uri],
+                    position_ms: song.offset_ms
+                }),
+                headers: {
+                    "Content-Type": "application/json",
+                    'Authorization': 'Bearer ' + token
+                },
+            })
+        }
+    }
+    document.getElementById("togglePlay").onclick = function () {
+        console.log("Pause!")
+        fetch("https://api.spotify.com/v1/me/player/pause", {
+            method: "PUT",
+            headers: {
+                'Authorization': 'Bearer ' + token
+            }
+        }).then(function (response) {
+            console.log(response);
+        })
+    }
+</script>
+<style>
+    #togglePlay {
+        background-color: #f54f4f;
+    }
+    #playlist {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+        align-items: center;
+        width: 90vw;
+        margin: 0 5vw;
+    }
+    .button {
+        background-color: #006398;
+        border: none;
+        color: white;
+        font-family: "Roboto", sans-serif;
+        font-size: 30px;
+        text-align: center;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 450px;
+        height: 250px;
+    }
+    #slider {
+        -webkit-appearance: none;
+        width: 90vw;
+        margin: 5vw;
+        height: 25px;
+        background: #d3d3d3;
+        outline: none;
+        opacity: 0.7;
+        -webkit-transition: .2s;
+        transition: opacity .2s;
+    }
+</style>
+</html>
