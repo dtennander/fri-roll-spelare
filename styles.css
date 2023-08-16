@@ -1,0 +1,37 @@
+#togglePlay {
+    background-color: #f54f4f;
+}
+#playlist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: left;
+    align-items: center;
+    width: 90vw;
+    margin: 0 5vw;
+}
+.button {
+    background-color: #006398;
+    border: none;
+    color: white;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 450px;
+    height: 250px;
+}
+#slider {
+    -webkit-appearance: none;
+    width: 90vw;
+    margin: 5vw;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
