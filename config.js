@@ -1,27 +1,33 @@
 window.songs = [
+    
     {
-        feeling: "happy",
+        feeling: "Mellanlåt Höghuset",
+        offset_ms: 0,
+        uri: "spotify:track:4pVE63OGS5BkXl04trGVug"
+    },
+        {
+        feeling: "Glad",
         offset_ms: 21_500,
         uri: "spotify:track:3oTYv0yShT4sjuPncoUXfK"
     },
-    {
-        feeling: "sad",
+        {
+        feeling: "Ledsen",
         offset_ms: 0,
         uri: "spotify:track:6zh0jASo2jjuPrM0mTMCIh"
     },
-    {
-        feeling: "melankolisk slutscen",
+        {
+        feeling: "Melankolisk slutscen",
         offset_ms: 0,
         uri: "spotify:track:0fjQ4u99SVRZFUILPs8yM1"
     },
-    {
-        feeling: "Kul!!!",
+        {
+        feeling: "Kul och cheezy",
         offset_ms: 10_000,
         uri: "spotify:track:0ac0IMOQCG2Xt5H9Ja70pU"
     },
         {
         feeling: "Dramatisk melankoli",
-        offset_ms: 10_000,
+        offset_ms: 25_000,
         uri: "spotify:track:4PRnYCH5hoxypKVcOBvx3a"
     },
     {
@@ -33,11 +39,6 @@ window.songs = [
         feeling: "Lyckligt slut",
         offset_ms: 0,
         uri: "spotify:track:73JnItJ3dofEssv5hWFHDs"
-    },
-            {
-        feeling: "Mellanlåt Höghuset",
-        offset_ms: 0,
-        uri: "spotify:track:4pVE63OGS5BkXl04trGVug"
     },
     
             {
@@ -78,11 +79,6 @@ window.songs = [
         uri: "spotify:track:36RTcbIM1CAOcUT8IZVCKy"
     },
                       {
-        feeling: "Hej jag gillar dig",
-        offset_ms: 0,
-        uri: "spotify:track:3sUWj8s6HBXGu20GXZ0QlE"
-    },
-                          {
         feeling: "Hej jag gillar dig",
         offset_ms: 0,
         uri: "spotify:track:3sUWj8s6HBXGu20GXZ0QlE"
