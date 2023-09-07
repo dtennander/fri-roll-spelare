@@ -7,7 +7,7 @@ window.songs = [
     {
         feeling: "sad",
         offset_ms: 0,
-        uri: "spotify:track:0fjQ4u99SVRZFUILPs8yM1"
+        uri: "spotify:track:6zh0jASo2jjuPrM0mTMCIh"
     },
     {
         feeling: "melankolisk slutscen",
