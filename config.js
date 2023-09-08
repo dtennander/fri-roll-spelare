@@ -87,5 +87,10 @@ window.songs = [
         feeling: "Mysig glad",
         offset_ms: 0,
         uri: "spotify:track:2ofqFPNsZO7QY3GuEj9SW4"
+    },
+    {
+        feeling: "Stress",
+        offset_ms: 3800,
+        uri: "spotify:track:0nF5aQoLs2YtbWwClXvumL",
     }
 ]
