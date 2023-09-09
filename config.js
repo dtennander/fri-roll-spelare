@@ -91,5 +91,6 @@ window.songs = [
     feeling: "Stress",
     offset_ms: 3800,
     uri: "spotify:track:0nF5aQoLs2YtbWwClXvumL",
+    colour: "#dead42",
   },
 ];
