@@ -2,7 +2,7 @@ function main() {
     window.spotify.login()
     for (const song of window.songs) {
         document.getElementById("playlist").innerHTML +=
-            "<div style='background-color: " + stringToColour(song.feeling) + "' class='button' id='" + song.feeling + "'> <img src='play.svg'>&emsp;" + song.feeling + "</div>";
+            "<div style='background-color: " + songToColour(song) + "' class='button' id='" + song.feeling + "'> <img src='play.svg'>&emsp;" + song.feeling + "</div>";
     }
 
     let slider = document.getElementById("slider");
