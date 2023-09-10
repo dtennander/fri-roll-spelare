@@ -23,6 +23,7 @@ window.songs = [
     feeling: "Kul och cheezy",
     offset_ms: 10_000,
     uri: "spotify:track:0ac0IMOQCG2Xt5H9Ja70pU",
+    colour: "#ffaadd"
   },
   {
     feeling: "Dramatisk melankoli",
