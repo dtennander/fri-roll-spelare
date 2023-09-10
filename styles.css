@@ -14,8 +14,6 @@ body {
     flex-wrap: wrap;
     justify-content: left;
     align-items: center;
-    width: 90vw;
-    margin: 0 5vw;
 }
 .button {
     background-color: #006398;
@@ -30,28 +28,22 @@ body {
     justify-content: center;
     width: 10em;
     height: 5em;
+    flex-grow: 1;
 }
 
 .button:active {
-    box-shadow: inset 0 0 13px 13px rgba(0,0,0,0.5);
+    box-shadow: inset 0 0 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 #slider {
     -webkit-appearance: none;
-    width: 90vw;
-    margin: 5vw;
+    width: 100vw;
     height: 25px;
     background: #d3d3d3;
     outline: none;
     opacity: 0.7;
     -webkit-transition: .2s;
     transition: opacity .2s;
-}
-
-#header {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
 }
 
 #header h1 {
