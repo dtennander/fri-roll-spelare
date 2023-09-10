@@ -3,6 +3,19 @@ window.songs = [
     feeling: "Mellanlåt Höghuset",
     offset_ms: 0,
     uri: "spotify:track:4pVE63OGS5BkXl04trGVug",
+    colour: "#676767",
+  },
+  {
+    feeling: "Lobby",
+    offset_ms: 0,
+    uri: "spotify:track:1YQWosTIljIvxAgHWTp7KP",
+    colour: "#562134",
+  },
+  {
+    feeling: "Stress",
+    offset_ms: 3800,
+    uri: "spotify:track:0nF5aQoLs2YtbWwClXvumL",
+    colour: "#dead42",
   },
   {
     feeling: "Glad",
@@ -87,11 +100,5 @@ window.songs = [
     feeling: "Mysig glad",
     offset_ms: 0,
     uri: "spotify:track:2ofqFPNsZO7QY3GuEj9SW4",
-  },
-  {
-    feeling: "Stress",
-    offset_ms: 3800,
-    uri: "spotify:track:0nF5aQoLs2YtbWwClXvumL",
-    colour: "#dead42",
   },
 ];
