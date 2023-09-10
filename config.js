@@ -45,7 +45,7 @@ window.songs = [
   },
   {
     feeling: "Dystert bråk",
-    offset_ms: 0,
+    offset_ms: 2500,
     uri: "spotify:track:4HE2Ex0bjbj3YNXmV01OoM",
   },
   {
