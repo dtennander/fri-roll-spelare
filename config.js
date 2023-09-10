@@ -18,6 +18,24 @@ window.songs = [
     colour: "#dead42",
   },
   {
+    feeling: "Intensivt bråk",
+    offset_ms: 3500,
+    uri: "spotify:track:3By9jCy6b4dv5XnlhvIWwx",
+    colour: "#8b0013",
+  },
+  {
+    feeling: "Adrenalin/Kris",
+    offset_ms: 38000,
+    uri: "spotify:track:2MvIMgtWyK88OiPi0J8Dg3",
+    colour: "#ab1023",
+  },
+  {
+    feeling: "PARTY",
+    offset_ms: 0,
+    uri: "spotify:track:2ps75wKIzxqiyO6gtXY9T0",
+    colour: "#65ea12",
+  },
+  {
     feeling: "Glad",
     offset_ms: 21_500,
     uri: "spotify:track:3oTYv0yShT4sjuPncoUXfK",
@@ -44,20 +62,16 @@ window.songs = [
     uri: "spotify:track:4PRnYCH5hoxypKVcOBvx3a",
   },
   {
-    feeling: "Dystert bråk",
-    offset_ms: 2500,
-    uri: "spotify:track:4HE2Ex0bjbj3YNXmV01OoM",
-  },
-  {
     feeling: "Lyckligt slut",
     offset_ms: 0,
     uri: "spotify:track:73JnItJ3dofEssv5hWFHDs",
   },
 
   {
-    feeling: "Konstig stämning",
+    feeling: "Konfrontation",
     offset_ms: 0,
     uri: "spotify:track:27j3JCRnPvr0QS5LC4zQMn",
+    colour: "#ff642b",
   },
 
   {
@@ -85,11 +99,6 @@ window.songs = [
     feeling: "Kärlek Kärlek Kärlek",
     offset_ms: 0,
     uri: "spotify:track:254bXAqt3zP6P50BdQvEsq",
-  },
-  {
-    feeling: "PARTY",
-    offset_ms: 0,
-    uri: "spotify:track:36RTcbIM1CAOcUT8IZVCKy",
   },
   {
     feeling: "Hej jag gillar dig",
