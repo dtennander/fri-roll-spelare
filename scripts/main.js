@@ -7,8 +7,7 @@ function main() {
 
     let slider = document.getElementById("slider");
     window.spotify.setVolume(slider.value)
-    slider.oninput = function () { window.spotify.setVolume(slider.value) }
-
+    slider.onchange = function () { window.spotify.setVolume(slider.value) }
 
     for (const song of window.songs) {
         document.getElementById(song.feeling).onclick = function () { window.spotify.playSong(song.uri, song.offset_ms) }
