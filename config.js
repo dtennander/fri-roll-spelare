@@ -1,5 +1,11 @@
 window.songs = [
   {
+    feeling: "Pause",
+    offset_ms: 0,
+    uri: "spotify:track:3c7XKoeH9mR4BGrS1CprUk",
+    colour: "#f54263"
+  },
+  {
     feeling: "Mellanlåt Höghuset",
     offset_ms: 0,
     uri: "spotify:track:4pVE63OGS5BkXl04trGVug",
@@ -76,7 +82,7 @@ window.songs = [
 
   {
     feeling: "Undertrycka känslor",
-    offset_ms: 0,
+    offset_ms: 10000,
     uri: "spotify:track:5ZqRgvkhpdImSoKvutrQHm",
   },
 
