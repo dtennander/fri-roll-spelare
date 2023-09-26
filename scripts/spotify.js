@@ -1,20 +1,5 @@
 // Description: Spotify API wrapper
 
-var playingVolume = 50
-
-function setVolume(volume) {
-    fetch("https://api.spotify.com/v1/me/player/volume?volume_percent=" + volume, {
-        method: "PUT",
-        headers: {
-            'Authorization': 'Bearer ' + localStorage.getItem("access_token")
-        }
-    }).then(function (rsp) {
-        if (rsp.status === 401) {
-            window.spotify.logout()
-        }
-    })
-}
-
 window.spotify = {
     logout: function () {
         if (localStorage.getItem('access_token')) {
@@ -65,7 +50,6 @@ window.spotify = {
 
     },
     playSong: function (uri, offset_ms) {
-        setVolume(playingVolume)
         fetch("https://api.spotify.com/v1/me/player/play", {
             method: "PUT",
             body: JSON.stringify({
@@ -83,11 +67,31 @@ window.spotify = {
         })
     },
     pause: function () {
-        setVolume(0)
+        console.error("Please don't pause! This will make the connected player sleep after some time!")
     },
-    setVolume: function (volume) {
-        playingVolume = volume
-        setVolume(volume)
+    setRepeat: function (state) {
+        fetch("https://api.spotify.com/v1/me/player/repeat?state=" + state, {
+            method: "PUT",
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem("access_token")
+            }
+        }).then(function (rsp) {
+            if (rsp.status === 401) {
+                window.spotify.logout()
+            }
+        })
+    },
+    setVolume: function(volume) {
+        fetch("https://api.spotify.com/v1/me/player/volume?volume_percent=" + volume, {
+            method: "PUT",
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem("access_token")
+            }
+        }).then(function (rsp) {
+            if (rsp.status === 401) {
+                window.spotify.logout()
+            }
+        })
     }
 }
 
