@@ -3,7 +3,7 @@ function main() {
   for (const song of window.songs) {
     document.getElementById("playlist").innerHTML +=
       "<div style='background-color: " + songToColour(song) +
-      "' class='button' id='" + song.feeling + "'> <img src='play.svg'>&emsp;" +
+      "' class='button' id='" + song.feeling + "'> <img src='" + (song.is_pause ? "pause.svg" : "play.svg") + "'>&emsp;" +
       song.feeling + "</div>";
   }
 
