@@ -69,6 +69,18 @@ window.spotify = {
     pause: function () {
         console.error("Please don't pause! This will make the connected player sleep after some time!")
     },
+    setRepeat: function (state) {
+        fetch("https://api.spotify.com/v1/me/player/repeat?state=" + state, {
+            method: "PUT",
+            headers: {
+                'Authorization': 'Bearer ' + localStorage.getItem("access_token")
+            }
+        }).then(function (rsp) {
+            if (rsp.status === 401) {
+                window.spotify.logout()
+            }
+        })
+    },
     setVolume: function(volume) {
         fetch("https://api.spotify.com/v1/me/player/volume?volume_percent=" + volume, {
             method: "PUT",

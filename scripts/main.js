@@ -14,6 +14,8 @@ function main() {
 
   for (const song of window.songs) {
     document.getElementById(song.feeling).onclick = function () {
+      // Let's make sure that the track is repeated.
+      window.spotify.setRepeat("track")
       window.spotify.playSong(song.uri, song.offset_ms);
     };
     document.getElementById(song.feeling).onpress = function () {
