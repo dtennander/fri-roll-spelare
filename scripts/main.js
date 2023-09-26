@@ -12,15 +12,19 @@ function main() {
     window.spotify.setVolume(slider.value);
   };
 
+  let activeButton = null;
   for (const song of window.songs) {
-    document.getElementById(song.feeling).onclick = function () {
+    const button = document.getElementById(song.feeling);
+    const action = function() {
       // Let's make sure that the track is repeated.
-      window.spotify.setRepeat("track")
+      window.spotify.setRepeat("track");
       window.spotify.playSong(song.uri, song.offset_ms);
-    };
-    document.getElementById(song.feeling).onpress = function () {
-      window.spotify.playSong(song.uri, song.offset_ms);
-    };
+      if (activeButton) activeButton.classList.remove("active");
+      button.classList.add("active");
+      activeButton = button;
+    }
+    button.onclick = action;
+    button.onpress = action;
   }
 }
 main();
