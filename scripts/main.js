@@ -8,7 +8,6 @@ function main() {
   }
 
   let slider = document.getElementById("slider");
-  window.spotify.setVolume(slider.value);
   slider.onchange = function () {
     window.spotify.setVolume(slider.value);
   };
@@ -21,8 +20,5 @@ function main() {
       window.spotify.playSong(song.uri, song.offset_ms);
     };
   }
-
-  document.getElementById("togglePlay").onclick = window.spotify.pause;
-  document.getElementById("togglePlay").onpress = window.spotify.pause;
 }
 main();
