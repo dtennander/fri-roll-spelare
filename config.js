@@ -1,3 +1,7 @@
+window.times = {
+  "warning": 30,
+  "end": 40
+}
 window.songs = [
   {
     feeling: "Pause",
