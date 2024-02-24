@@ -11,6 +11,12 @@ window.songs = [
     colour: "#f54263"
   },
   {
+    feeling: "Kammarspel",
+    offset_ms: 0,
+    uri: "spotify:track:2300WCL7tdmKvsH2LYSXXx",
+    colour: "#aaaaff"
+  },
+  {
     feeling: "Mellanlåt Höghuset",
     offset_ms: 0,
     uri: "spotify:track:4pVE63OGS5BkXl04trGVug",
