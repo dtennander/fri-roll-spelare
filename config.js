@@ -7,7 +7,7 @@ window.songs = [
     feeling: "Pause",
     offset_ms: 0,
     is_pause: true,
-    uri: "spotify:track:7depNAqAh1r9unkIRzibID",
+    uri: "spotify:track:3mkOlbSv5RYadx0JsjTrKq",
     colour: "#f54263"
   },
   {
