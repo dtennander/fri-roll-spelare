@@ -22,29 +22,95 @@ window.songs = [
     uri: "spotify:track:4pVE63OGS5BkXl04trGVug",
     colour: "#676767",
   },
-  {
-    feeling: "Lobby",
+   {
+    feeling: "Lycka",
+    offset_ms: 10000,
+    uri: "spotify:track:5ZqRgvkhpdImSoKvutrQHm",
+    colour: "e0e485",
+  }, 
+ {
+    feeling: "Lättsam glädje",
     offset_ms: 0,
-    uri: "spotify:track:1YQWosTIljIvxAgHWTp7KP",
-    colour: "#562134",
+    uri: "spotify:track:0JBKg12rmljNSimSAp5ROo",
+    colour: "#6cd897",
   },
   {
-    feeling: "Stress",
-    offset_ms: 3800,
-    uri: "spotify:track:0nF5aQoLs2YtbWwClXvumL",
-    colour: "#dead42",
+    feeling: "Sorg",
+    offset_ms: 0,
+    uri: "spotify:track:3hRV0jL3vUpRrcy398teAU",
+    colour: "#4a77cb",
+  },
+ {
+    feeling: "Melankoli",
+    offset_ms: 1000,
+    uri: "spotify:track:4vhzRPnT60OOD9TIcvhDBe",
+    colour: "#d77ad0",
   },
   {
-    feeling: "Intensivt bråk",
+    feeling: "Desperation",
+    offset_ms: 0,
+    uri: "spotify:track:27j3JCRnPvr0QS5LC4zQMn",
+    colour: "#d8956e",
+  },
+  {
+    feeling: "Meditativ Harmoni",
+    offset_ms: 0,
+    uri: "spotify:track:09uiagFAlQyUuzL2h4sA3p",
+    colour: "#d587ac",	
+  },
+  {
+    feeling: "Bombastisk kris",
     offset_ms: 3500,
     uri: "spotify:track:3By9jCy6b4dv5XnlhvIWwx",
-    colour: "#8b0013",
+    colour: "#7bc1b5",
   },
   {
-    feeling: "Adrenalin/Kris",
-    offset_ms: 38000,
+    feeling: "Slå sönder ett rum",
+    offset_ms: 5000,
     uri: "spotify:track:2MvIMgtWyK88OiPi0J8Dg3",
-    colour: "#ab1023",
+    colour: "#0d0093",
+  },
+  {
+    feeling: "Uppbrott (nu drar jag)",
+    offset_ms: 0,
+    uri: "spotify:track:5eB58OZ7IHM95VgzRJB3ik",
+    colour: "#9a0097",
+  },
+  {
+    feeling: "Nya känslor / försoning",
+    offset_ms: 3000,
+    uri: "spotify:track:1OX2lkGZmC0uHPNHAxbFln",
+    colour: "#79d12c",
+  },
+  {
+    feeling: "Spirande kärlek",
+    offset_ms: 0,
+    uri: "spotify:track:254bXAqt3zP6P50BdQvEsq",
+    colour: "#f15000",
+  },
+  {
+    feeling: "Steamy kärlek",
+    offset_ms: 21_500,
+    uri: "spotify:track:0ADUcB6mcdtkh9WL0kmHgS",
+    colour: "#ff02d5",
+  },
+  {
+    feeling: "Bitterljuvt",
+    offset_ms: 11000,
+    uri: "spotify:track:0SDZeX4WGbvkzQDSwmxzog",
+    colour: "#ffe100",
+  },
+  {
+    feeling: "Drive into the sunset",
+    offset_ms: 0,
+    uri: "spotify:track:73JnItJ3dofEssv5hWFHDs",
+    colour: "#39e200",
+  },
+  {
+    feeling: "Himmelskt / sakralt",
+    offset_ms: 0,
+    uri: "spotify:track:3sUWj8s6HBXGu20GXZ0QlE",
+    colour: "#01373d"
   },
   {
     feeling: "PARTY",
@@ -52,79 +118,30 @@ window.songs = [
     uri: "spotify:track:2ps75wKIzxqiyO6gtXY9T0",
     colour: "#65ea12",
   },
+
   {
-    feeling: "Glad",
-    offset_ms: 21_500,
-    uri: "spotify:track:3oTYv0yShT4sjuPncoUXfK",
-  },
-  {
-    feeling: "Ledsen",
+    feeling: "Läskigt",
     offset_ms: 0,
-    uri: "spotify:track:6zh0jASo2jjuPrM0mTMCIh",
+    uri: "spotify:track:6fvppw5iTXQ2LoBezmdVOd",
+    colour: "#3d0101",
   },
   {
-    feeling: "Melankolisk slutscen",
+    feeling: "Bakgrundsprat",
     offset_ms: 0,
-    uri: "spotify:track:6zh0jASo2jjuPrM0mTMCIh",
+    uri: "spotify:track:08lfL2CwfrnkcyNE4SMzc0",
+    colour: "#16013d",
   },
   {
-    feeling: "Kul och cheezy",
+    feeling: "Fågelkvitter",
     offset_ms: 10_000,
-    uri: "spotify:track:0ac0IMOQCG2Xt5H9Ja70pU",
-    colour: "#ffaadd"
-  },
-  {
-    feeling: "Dramatisk melankoli",
-    offset_ms: 25_000,
-    uri: "spotify:track:4PRnYCH5hoxypKVcOBvx3a",
-  },
-  {
-    feeling: "Lyckligt slut",
-    offset_ms: 0,
-    uri: "spotify:track:73JnItJ3dofEssv5hWFHDs",
+    uri: "spotify:track:3A4qEIrWDUtAfmR8DdtLpT",
+    colour: "#013d12"
   },
 
   {
-    feeling: "Konfrontation",
+    feeling: "Lobby",
     offset_ms: 0,
-    uri: "spotify:track:27j3JCRnPvr0QS5LC4zQMn",
-    colour: "#ff642b",
-  },
-
-  {
-    feeling: "Undertrycka känslor",
-    offset_ms: 10000,
-    uri: "spotify:track:5ZqRgvkhpdImSoKvutrQHm",
-  },
-
-  {
-    feeling: "Falling in love",
-    offset_ms: 0,
-    uri: "spotify:track:1OX2lkGZmC0uHPNHAxbFln",
-  },
-  {
-    feeling: "Andligt",
-    offset_ms: 0,
-    uri: "spotify:track:09uiagFAlQyUuzL2h4sA3p",
-  },
-  {
-    feeling: "Nu lämnar jag den här skiten",
-    offset_ms: 0,
-    uri: "spotify:track:0puKNGpsvyFpWoWF4PLFMU",
-  },
-  {
-    feeling: "Kärlek Kärlek Kärlek",
-    offset_ms: 0,
-    uri: "spotify:track:254bXAqt3zP6P50BdQvEsq",
-  },
-  {
-    feeling: "Hej jag gillar dig",
-    offset_ms: 0,
-    uri: "spotify:track:3sUWj8s6HBXGu20GXZ0QlE",
-  },
-  {
-    feeling: "Mysig glad",
-    offset_ms: 0,
-    uri: "spotify:track:2ofqFPNsZO7QY3GuEj9SW4",
+    uri: "spotify:track:3A4qEIrWDUtAfmR8DdtLpT",
+    colour: "#b0b0b0",
   },
 ];
