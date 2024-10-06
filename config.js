@@ -16,12 +16,6 @@ window.songs = [
     uri: "spotify:track:2300WCL7tdmKvsH2LYSXXx",
     colour: "#aaaaff"
   },
-  {
-    feeling: "Mellanlåt Höghuset",
-    offset_ms: 0,
-    uri: "spotify:track:4pVE63OGS5BkXl04trGVug",
-    colour: "#676767",
-  },
    {
     feeling: "Lycka",
     offset_ms: 10000,
@@ -143,5 +137,11 @@ window.songs = [
     offset_ms: 0,
     uri: "spotify:track:3A4qEIrWDUtAfmR8DdtLpT",
     colour: "#b0b0b0",
+  },
+  {
+    feeling: "Mellanlåt Höghuset",
+    offset_ms: 0,
+    uri: "spotify:track:4pVE63OGS5BkXl04trGVug",
+    colour: "#676767",
   },
 ];
