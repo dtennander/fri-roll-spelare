@@ -82,7 +82,8 @@ window.spotify = {
         })
     },
     setVolume: function(volume) {
-        fetch("https://api.spotify.com/v1/me/player/volume?volume_percent=" + volume, {
+        console.log("Setting volume to " + volume)
+        fetch("https://api.spotify.com/v1/me/player/volume?volume_percent=" + Math.floor(volume), {
             method: "PUT",
             headers: {
                 'Authorization': 'Bearer ' + localStorage.getItem("access_token")
@@ -92,6 +93,22 @@ window.spotify = {
                 window.spotify.logout()
             }
         })
+    },
+    fadeOut: function(startVolume, endVolume, duration, end_track, steps = 20) {
+      window.spotify.setVolume(startVolume);
+      const diff = endVolume - startVolume;
+      const stepDuration = duration / steps;
+      const stepSize = diff / steps;
+      for (let i = 1; i <= steps; i++) {
+        setTimeout(() => {
+          console.log("Setting volume:", stepSize, i, startVolume);
+          window.spotify.setVolume(Number(startVolume) + stepSize * i);
+        }, i * stepDuration * 1000);
+      }
+      setTimeout(() => {
+        window.spotify.playSong(end_track.uri, end_track.offset_ms);
+        window.spotify.setVolume(startVolume);
+      }, duration * 1000);
     }
 }
 
