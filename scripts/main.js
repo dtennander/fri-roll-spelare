@@ -12,6 +12,13 @@ function main() {
     window.spotify.setVolume(slider.value);
   };
 
+  const keepingConnectionAlive = function () {
+    window.spotify.setVolume(slider.value);
+    setTimeout(keepingConnectionAlive, 10_000);
+  }
+  keepingConnectionAlive();
+
+
   let activeButton = null;
   for (const song of window.songs) {
     const button = document.getElementById(song.feeling);
