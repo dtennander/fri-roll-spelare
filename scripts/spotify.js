@@ -94,7 +94,10 @@ window.spotify = {
             }
         })
     },
+    is_fading: false,
     fadeOut: function(startVolume, endVolume, duration, end_track, steps = 20) {
+      if (window.spotify.is_fading) return
+      window.spotify.is_fading = true;
       window.spotify.setVolume(startVolume);
       const diff = endVolume - startVolume;
       const stepDuration = duration / steps;
@@ -107,8 +110,11 @@ window.spotify = {
       }
       setTimeout(() => {
         window.spotify.playSong(end_track.uri, end_track.offset_ms);
-        window.spotify.setVolume(startVolume);
-      }, duration * 1000);
+        setTimeout(() => {
+          window.spotify.setVolume(startVolume)
+          window.spotify.is_fading = false;
+        }, 100);
+      }, duration * 1000 + 10);
     }
 }
 
